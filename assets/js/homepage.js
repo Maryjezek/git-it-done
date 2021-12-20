@@ -13,7 +13,7 @@ var formSubmitHandler = function(event) {
 
   if (username) {
     getUserRepos(username);
-
+  
     // clear old content
     repoContainerEl.textContent = "";
     nameInputEl.value = "";
@@ -76,6 +76,9 @@ var getFeaturedRepos = function(language) {
 
 var displayRepos = function(repos, searchTerm) {
   // check if api returned any repos
+  console.log(repos);
+  console.log(searchTerm);
+
   if (repos.length === 0) {
     repoContainerEl.textContent = "No repositories found.";
     return;
@@ -123,3 +126,6 @@ var displayRepos = function(repos, searchTerm) {
 // add event listeners to form and button container
 userFormEl.addEventListener("submit", formSubmitHandler);
 languageButtonsEl.addEventListener("click", buttonClickHandler);
+
+
+

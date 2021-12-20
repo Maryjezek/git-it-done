@@ -19,6 +19,7 @@ var getRepoName = function() {
 };
 
 var getRepoIssues = function(repo) {
+  console.log(repo);
   // format the github api url
   var apiUrl = "https://api.github.com/repos/" + repo + "/issues?direction=asc";
 
